@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonzyPanel Store</title>
+
+<style>
+body {
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f172a;
+  color:white;
+}
+
+/* NAVBAR */
+nav {
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
+  background:#020617;
+}
+nav a {
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+}
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding:60px 20px;
+  background:linear-gradient(135deg,#1e293b,#0f172a);
+}
+.hero h1 {
+  font-size:32px;
+}
+.btn {
+  padding:12px 20px;
+  background:#22c55e;
+  border:none;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+}
+
+/* CARD */
+.container {
+  padding:20px;
+}
+.card {
+  background:#1e293b;
+  padding:20px;
+  margin:15px 0;
+  border-radius:12px;
+  text-align:center;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <b>🔥 Monzymarket</b>
+  <div>
+    <a href="#harga">Harga</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Kontak</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Panel Murah & Anti Ribet</h1>
+  <p>Terpercaya • Fast • Aman</p>
+  <button class="btn" onclick="scrollToHarga()">Lihat Harga</button>
+</div>
+
+<!-- HARGA -->
+<div class="container" id="harga">
+  <h2>💰 Paket Panel</h2>
+
+  <div class="card">
+    <h3>RAM 3GB</h3>
+    <p>Rp1.000</p>
+    <button class="btn" onclick="order('Panel RAM 3GB - Rp1.000')">Beli</button>
+  </div>
+
+  <div class="card">
+    <h3>RAM 4GB</h3>
+    <p>Rp2.000</p>
+    <button class="btn" onclick="order('Panel RAM 4GB - Rp2.000')">Beli</button>
+  </div>
+
+  <div class="card">
+    <h3>RAM 5GB</h3>
+    <p>Rp3.000</p>
+    <button class="btn" onclick="order('Panel RAM 5GB - Rp3.000')">Beli</button>
+  </div>
+
+  <div class="card">
+    <h3>RAM 6GB</h3>
+    <p>Rp4.000</p>
+    <button class="btn" onclick="order('Panel RAM 6GB - Rp4.000')">Beli</button>
+  </div>
+
+  <div class="card">
+    <h3>RAM 9GB</h3>
+    <p>Rp5.000</p>
+    <button class="btn" onclick="order('Panel RAM 9GB - Rp5.000')">Beli</button>
+  </div>
+
+  <div class="card">
+    <h3>RAM 10GB</h3>
+    <p>Rp6.000</p>
+    <button class="btn" onclick="order('Panel RAM 10GB - Rp6.000')">Beli</button>
+  </div>
+
+  <div class="card">
+    <h3>UNLIMITED</h3>
+    <p>Rp8.000</p>
+    <button class="btn" onclick="order('Panel UNLIMITED - Rp8.000')">Beli</button>
+  </div>
+
+</div>
+
+<!-- KEUNGGULAN -->
+<div class="container">
+  <h2>🚀 Keunggulan</h2>
+  <div class="card">⚡ Server cepat</div>
+  <div class="card">🔒 Aman & stabil</div>
+  <div class="card">🤖 Auto proses</div>
+</div>
+
+<!-- keunggulan -->
+<div class="container">
+  <h2>⭐ keunggulan order</h2>
+  <div class="card">"Murah & cepat!"</div>
+  <div class="card">"Admin fast respon!"</div>
+</div>
+
+<!-- FAQ -->
+<div class="container" id="faq">
+  <h2>❓ FAQ</h2>
+  <div class="card"> Cara beli?<br> Klik tombol beli</div>
+  <div class="card"> Berapa lama?<br> 1-5 menit</div>
+</div>
+
+<!-- CONTACT -->
+<div class="container" id="contact">
+  <h2>📞 Kontak</h2>
+  <button class="btn" onclick="order('Halo admin saya mau tanya')">Chat Admin</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Monzymarket Official
+</footer>
+
+<script>
+function order(paket){
+  let nomor = "6283131342769"; // GANTI NOMOR LU
+  let text = "Halo admin, saya mau order: " + paket;
+  window.open(`https://wa.me/${nomor}?text=${encodeURIComponent(text)}`, "_blank");
+}
+
+function scrollToHarga(){
+  document.getElementById("harga").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
